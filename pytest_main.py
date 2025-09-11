@@ -11,14 +11,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+ 
+import sys
+import pytest
 
-# Package information
-        
-module(
-    name = "osrf_pycommon",
-    version = "2.1.4",
-    compatibility_level = 0,
-)
-
-bazel_dep(name = "rosdistro", version = "rolling-2025-09-05")
-bazel_dep(name = "rules_python", version = "1.6.1")
+if __name__ == "__main__":
+    sys.exit(pytest.main(sys.argv[1:]))
